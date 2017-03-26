@@ -127,7 +127,7 @@ DATA_UPLOAD_MAX_MEMORY_SIZE = 50000000
 LOGIN_URL = '/'
 ACCOUNT_LOGOUT_REDIRECT_URL = '/'
 
-# Debug Toolbar settings
+# Debug Toolbar settings -- for local only
 INTERNAL_IPS = ['127.0.0.1', ]
 DEBUG_TOOLBAR_PATCH_SETTINGS = False
 
