@@ -31,6 +31,7 @@ INSTALLED_APPS = (
     'choices',
     'django_cleanup',
     'import_export',
+    'sponsorship'
 )
 
 if os.environ.get('LOCAL_MACHINE') and TOOLBAR:
@@ -76,7 +77,7 @@ WSGI_APPLICATION = 'wevoice.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'wevoicerel',
+        'NAME': 'haitidb',
         'USER': 'root',
         'PASSWORD': 'root',
         'HOST': 'localhost',

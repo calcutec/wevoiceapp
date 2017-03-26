@@ -1,7 +1,6 @@
 import os
 from django.conf.urls import include, url
 from django.contrib import admin
-from django.contrib.auth.views import logout
 from django.conf import settings
 from django.conf.urls.static import static, serve
 admin.autodiscover()
