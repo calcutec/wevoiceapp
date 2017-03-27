@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block extra-head %}
+    <link href="{% static "css/slider.css" %}" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="{% static "js/jquery-3.2.0.min.js" %}"></script>
+    <script type="text/javascript" src="{% static "js/responsiveslides.js" %}"></script>
+    <script type="text/javascript">
+    jQuery(function ($) {
+      $("#sponsorship").responsiveSlides({
+        auto: false,
+        pager: false,
+        nav: true,
+        speed: 500,
+        namespace: "callbacks",
+      });
+    });
+    </script>
+{% endblock extra-head %}
+{% block content %}
+    <h1>Sponsorship</h1>
+    <div id="wrapper">
+        <div class="sponsorship_container">
+          <ul class="rslides" id="sponsorship">
+            <li>
+              <div class="info-wrapper">
+                <h2 class="child-name">Meet Judelka</h2>
+                <img class="child-image" alt="child-image" src="{% static "wp-content/RT025459HA.png" %}">
+                <p class="child-gender"><i class="fa fa-venus-mars fa-1x fa-border"></i> Female</p>
+                <p class="child-age"><i class="fa fa-birthday-cake fa-1x fa-border"></i> 05/07/2003 (Age 13)</p>
+                <p class="child-info">Judelka does not live with her parents. Her parents are farmers and neither of them can read nor write. They earn less than $12.22 each day .The health of her family relies on regular treatment by MAII’s health clinics. Her family usually manage to eat once each day. Judelka needs help to make positive changes for her family.</p>
+              </div>
+            </li>
+            <li>
+              <div class="info-wrapper">
+                <h2 class="child-name">Meet Bibine</h2>
+                <img class="child-image" alt="child-image" src="{% static "wp-content/RT025452H.png" %}">
+                <p class="child-gender"><i class="fa fa-venus-mars fa-1x fa-border"></i> Girl</p>
+                <p class="child-age"><i class="fa fa-birthday-cake fa-1x fa-border"></i> 07/20/2011 (Age 5)</p>
+                <p class="child-info">Bibine lives with her family. Her father owns land, her mother is unemployed, and neither of them knows how to read or write. The family usually only manages to eat once each day.  Bibine needs an education to make positive changes for her family.</p>
+              </div>
+            </li>
+            <li>
+              <div class="info-wrapper">
+                <h2 class="child-name">Meet Samson</h2>
+                <img class="child-image" alt="child-image" src="{% static "wp-content/RT025468H.png" %}">
+                <p class="child-gender"><i class="fa fa-venus-mars fa-1x fa-border"></i> Boy</p>
+                <p class="child-age"><i class="fa fa-birthday-cake fa-1x fa-border"></i> 07/11/2003 (Age 13)</p>
+                <p class="child-info">With your help, Samson could acquire an education and help lift his household out of their dire economic situation and provide basic human essentials to his family</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+    </div>
+{%  endblock content %}
+{% block footer %}
+{% endblock footer %}

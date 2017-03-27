@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+        <form action="" method="post" autocomplete="off">{% csrf_token %}
+            <table width="296" class="signintable">
+              {% if form.errors %}
+                <tr style="color: red;">
+                    <td>Please correct the error{{ form.errors|pluralize }} below.</td>
+                </tr>
+              {% endif %}
+              <tr>
+                <td style="padding:0 0 5px 28px;text-align:left">Username</td>
+              </tr>
+              <tr>
+                <td>{{ form.username }}</td>
+              </tr>
+              {% if form.username.errors %}
+                  <tr>
+                    {% for error in form.username.errors %}
+                        <td class="error-message"><strong>{{ error|escape }}</strong></td>
+                    {% endfor %}
+                  </tr>
+              {% endif %}
+              <tr>
+                <td style="padding:0 0 5px 28px;text-align:left">Password</td>
+              </tr>
+              <tr>
+                <td>{{ form.password }}</td>
+              </tr>
+              {% if form.password.errors %}
+                  <tr>
+                    {% for error in form.password.errors %}
+                        <td class="error-message"><strong>{{ error|escape }}</strong></td>
+                    {% endfor %}
+                  </tr>
+              {% endif %}
+              <tr>
+                <td><input name="submit" type="submit" class="submitboxes01" value="SUBMIT" /></td>
+              </tr>
+            </table>
+        </form>
+{%  endblock content %}
+{% block footer %}
+{% endblock footer %}

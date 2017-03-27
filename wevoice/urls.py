@@ -8,16 +8,14 @@ admin.autodiscover()
 if settings.DEBUG:
     import debug_toolbar
     urlpatterns = [
-        url(r'^admin/logout/', include('choices.urls')),
         url(r'^admin/', include(admin.site.urls)),
         url(r'^__debug__/', include(debug_toolbar.urls)),
-        url(r'^', include('choices.urls'))
+        url(r'^', include('sponsorship.urls'))
     ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 else:
     urlpatterns = [
-        url(r'^admin/logout/', include('choices.urls')),
         url(r'^admin/', include(admin.site.urls)),
-        url(r'^', include('choices.urls'))
+        url(r'^', include('sponsorship.urls'))
     ]
 
 # for serving static files in development with DEBUG = False
